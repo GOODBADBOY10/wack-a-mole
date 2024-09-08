@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory Practise</title>
+    </head>
+    <style>
+        body {
+            width: 100%;
+            min-height: 100vh;
+            margin: 0 auto;
+            background-image: url('./images/mario-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        h1 {
+            font-size: 30px;
+            text-align: center;
+        }
+        #score {
+            text-align: center;
+        }
+        #board {
+            width: 420px;
+            height: 420px;
+            background-image: url('./images/soil.png');
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            border: 3px solid white;
+            border-radius: 25px;
+        }
+        #board div {
+            background-image: url('./images/pipe.png');
+            background-size: cover;
+            background-position: center;
+            width: 140px;
+            height: 140px;
+        }
+        #board div img {
+            width: 100px;
+            height: 80px;
+            border-radius: 50%;
+
+            user-select: none;
+            -moz-user-select: none;
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+        #restart {
+            width: 100px;
+            height: 50px;
+            font-size: 24px;
+            font-weight: bold;
+            margin-left: 50%;
+        }
+    </style>
+    <script src="./mole.js"></script>
+    <body>
+        <div id="board-game">
+            <h1>A wack the hole memory game</h1>
+            <p id="score">0</p>
+            <!-- Board game -->
+             <div id="board"></div>
+             <button id="restart">Restart</button>
+        </div>
+    </body>
+</html>
